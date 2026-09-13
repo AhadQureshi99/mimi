@@ -1,0 +1,15 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "cursor/deeda-cinematic-experience-d892",
+    "main"
+  ],
+  "parent": {
+    "cursor/deeda-cinematic-experience-d892": "main",
+    "main": null
+  },
+  "order": [
+    "main",
+    "cursor/deeda-cinematic-experience-d892"
+  ]
+}
