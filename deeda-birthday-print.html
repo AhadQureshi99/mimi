@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Happy 19th, Deeda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  :root{
+    --ink:#1a1210;
+    --burgundy:#3a1317;
+    --rose:#7a2e35;
+    --gold:#8a6b3a;
+    --gold2:#a8844a;
+    --cream:#f7f1e8;
+    --muted:#6e625a;
+    --rule:rgba(122,46,53,.28);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Crimson Pro',Georgia,serif;
+    font-weight:300;
+    font-size:12.5pt;
+    line-height:1.65;
+    color:var(--ink);
+    background:#fff;
+  }
+  .page{
+    max-width:170mm;
+    margin:0 auto;
+  }
+  .cover{
+    min-height:240mm;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    page-break-after:always;
+    padding:20mm 8mm;
+  }
+  .orn{color:var(--gold2);letter-spacing:.4em;font-size:10pt;margin-bottom:18mm;}
+  .cover-quote{
+    font-family:'IM Fell English',Georgia,serif;
+    font-style:italic;
+    font-size:15pt;
+    color:var(--burgundy);
+    max-width:120mm;
+    line-height:1.9;
+    margin:0 0 10mm;
+  }
+  .cover h1{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-weight:300;
+    font-size:42pt;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--burgundy);
+    margin:8mm 0 4mm;
+  }
+  .cover h1 em{
+    display:block;
+    font-style:italic;
+    font-size:1.15em;
+    letter-spacing:.12em;
+    color:var(--gold2);
+    margin-top:2mm;
+  }
+  .cover-sub{
+    font-size:10pt;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:10mm;
+  }
+  .rule{
+    width:28mm;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);
+    margin:8mm auto;
+  }
+  h2{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-weight:300;
+    font-size:20pt;
+    color:var(--burgundy);
+    letter-spacing:.04em;
+    margin:0 0 3mm;
+  }
+  h2 em{font-style:italic;color:var(--gold2);}
+  .eyebrow{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:8.5pt;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--rose);
+    margin-bottom:2mm;
+  }
+  .chapter{
+    page-break-inside:avoid;
+    margin:0 0 14mm;
+    padding-bottom:8mm;
+    border-bottom:1px solid var(--rule);
+  }
+  .chapter:last-of-type{border-bottom:none;}
+  .epigraph{
+    font-family:'IM Fell English',Georgia,serif;
+    font-style:italic;
+    color:var(--muted);
+    font-size:11.5pt;
+    margin:0 0 6mm;
+  }
+  .card{
+    margin:5mm 0;
+    padding:5mm 6mm;
+    border:1px solid var(--rule);
+    background:var(--cream);
+  }
+  .card .lbl{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:8pt;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);
+  }
+  .card .ttl{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:16pt;color:var(--burgundy);margin:.8mm 0;
+  }
+  .card .meta{font-size:10pt;color:var(--muted);font-style:italic;margin-bottom:3mm;}
+  .card .qt{
+    font-family:'IM Fell English',Georgia,serif;
+    font-style:italic;color:var(--gold);margin:2mm 0 3mm;
+  }
+  .card .mem{font-size:11.5pt;}
+  .chat{
+    font-size:11pt;
+    margin:4mm 0;
+  }
+  .bubble{
+    max-width:85%;
+    margin:2.2mm 0;
+    padding:2.4mm 4mm;
+    border-radius:3mm;
+  }
+  .bubble.her{
+    background:#f0e6dc;
+    border:1px solid rgba(122,46,53,.15);
+  }
+  .bubble.you{
+    background:#efe4cf;
+    border:1px solid rgba(168,132,74,.25);
+    margin-left:auto;
+    text-align:right;
+  }
+  .chat-stamp{
+    text-align:center;
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:8.5pt;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:5mm 0 3mm;
+  }
+  .letter{
+    page-break-before:always;
+    padding-top:8mm;
+  }
+  .letter-greeting{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:18pt;
+    color:var(--burgundy);
+    margin-bottom:6mm;
+  }
+  .letter p{
+    margin:0 0 4.5mm;
+    font-size:12pt;
+    line-height:1.8;
+  }
+  .letter p.pause{margin-top:6mm;}
+  .sign{
+    margin-top:10mm;
+    font-family:'IM Fell English',Georgia,serif;
+    font-style:italic;
+    color:var(--gold2);
+    font-size:13pt;
+  }
+  .finale{
+    page-break-before:always;
+    min-height:220mm;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    padding:10mm 6mm;
+  }
+  .finale .fl{
+    font-family:'IM Fell English',Georgia,serif;
+    font-style:italic;
+    font-size:13pt;
+    color:var(--ink);
+    margin:2.5mm 0;
+    line-height:1.85;
+  }
+  .finale .accent{color:var(--gold2);font-size:14pt;}
+  .finale .grand{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-size:20pt;
+    color:var(--burgundy);
+    margin:5mm 0;
+  }
+  .finale .small{font-size:11pt;color:var(--muted);}
+  .wish{
+    text-align:center;
+    margin:10mm 0;
+    padding:8mm 6mm;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+  }
+  .wish .big{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    font-style:italic;
+    font-size:22pt;
+    color:var(--gold2);
+  }
+  .wish .sub{
+    font-family:'IM Fell English',Georgia,serif;
+    font-style:italic;
+    color:var(--muted);
+    margin-top:3mm;
+    max-width:130mm;
+    margin-left:auto;margin-right:auto;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <section class="cover">
+    <div class="orn">✦</div>
+    <p class="cover-quote">“Some stories are read once.<br/>Some stories become people.”</p>
+    <div class="rule"></div>
+    <h1>Happy 19th,<em>Deeda.</em></h1>
+    <div class="rule"></div>
+    <p class="cover-sub">A story in chapters, written for one person</p>
+  </section>
+
+  <section class="chapter">
+    <div class="eyebrow">Chapter I — Our Universe</div>
+    <h2>Rida. <em>Deeda.</em></h2>
+    <p class="epigraph">A story written in books, movies, and the kind of late-night conversations that quietly change you forever.</p>
+    <p>The one who stays through every twist.</p>
+  </section>
+
+  <section class="chapter">
+    <div class="eyebrow">Chapter II — Our Library</div>
+    <h2>The Books That <em>Broke Us</em></h2>
+    <p class="epigraph">“Every story has chapters we never forget. The ones that cracked something open in us — together.”</p>
+
+    <div class="card">
+      <div class="lbl">Our Library · Book I</div>
+      <div class="ttl">The Atlas Six</div>
+      <div class="meta">Olivie Blake</div>
+      <div class="qt">“Power is not given. It is taken, and then it takes from you.”</div>
+      <div class="mem">We ended up in a three-hour spiral about Callum at 2AM. You were defending him. I was horrified. Both of us were wrong and right at the same time — which says everything.</div>
+      <p style="margin-top:3mm;font-style:italic;color:var(--muted);font-size:11pt;">“We stopped trusting the entire cast after Part II and somehow that made us love them even more. That’s such a you-and-me thing.”</p>
+    </div>
+
+    <div class="card">
+      <div class="lbl">Our Library · Book II</div>
+      <div class="ttl">Normal People</div>
+      <div class="meta">Sally Rooney</div>
+      <div class="qt">“She had to be what he needed her to be, and in doing so, she had forgotten what she needed.”</div>
+      <div class="mem">You finished it first and sent me three voice notes in a row. I could hear everything you felt and I hadn’t even started chapter four yet. You ruined me for it — in the best possible way.</div>
+      <p style="margin-top:3mm;font-style:italic;color:var(--muted);font-size:11pt;">“We both stopped talking for a while after this one. Not because we were sad — because we recognised something. We didn’t have to say what.”</p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="eyebrow">Chapter III — Cinema Memories</div>
+    <h2>Frames We <em>Couldn’t Shake</em></h2>
+    <p class="epigraph">“Some films don’t end when the credits roll. They keep running somewhere behind your eyes.”</p>
+
+    <div class="card">
+      <div class="lbl">Memory Reel I · #0417</div>
+      <div class="ttl">Past Lives</div>
+      <div class="meta">2023 · Celine Song</div>
+      <div class="mem">“We didn’t speak after that last scene. The silence was us processing something we both felt but couldn’t name.”</div>
+    </div>
+
+    <div class="card">
+      <div class="lbl">Memory Reel II · #0219</div>
+      <div class="ttl">Little Women</div>
+      <div class="meta">2019 · Greta Gerwig</div>
+      <div class="mem">“The part where she says ‘Women have minds, and souls’ — you sent it to me three times. I understood why all three times.”</div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="eyebrow">Chapter IV — Late Nights</div>
+    <h2>Things We <em>Actually Said</em></h2>
+    <p class="epigraph">“Some conversations don’t end. They just pause — until the next 3AM.”</p>
+
+    <div class="chat">
+      <div class="chat-stamp">3:47 AM · a night we won’t forget</div>
+      <div class="bubble her">okay I just finished that chapter and I need to lie down for a moment</div>
+      <div class="bubble you"><em>I TOLD YOU.</em> I told you not to trust him</div>
+      <div class="bubble her">the author is personally attacking me. this is a hate crime</div>
+      <div class="bubble you">we grieve together</div>
+      <div class="chat-stamp">some other ungodly hour</div>
+      <div class="bubble her">why does every fictional man I like turn out to be <em>exactly like that</em></div>
+      <div class="bubble you">because we have taste and also <strong>terrible</strong> luck</div>
+      <div class="bubble her">that is actually the most accurate thing you’ve ever said to me</div>
+      <div class="bubble you">this is fine. we’re fine. <em>(we are not fine)</em></div>
+      <div class="bubble her">no we really aren’t but it’s kind of wonderful, isn’t it?</div>
+      <div class="bubble you">the most wonderful kind of not fine. always with you</div>
+    </div>
+    <p style="text-align:center;font-style:italic;color:var(--muted);margin-top:6mm;">Some conversations only make sense at 3:47 AM.</p>
+  </section>
+
+  <section class="letter">
+    <div class="eyebrow">Chapter V — The Letter</div>
+    <h2>Something I’ve <em>Been Meaning</em> to Say</h2>
+    <p class="epigraph">There are things that live between conversations. Things I wrote in my head a hundred times and never sent. Until now.</p>
+
+    <div class="letter-greeting">Deeda,</div>
+    <p class="pause">There are people you meet and you know — the way you always know, in fiction — that they matter.</p>
+    <p>You were one of those people. You still are. You always will be.</p>
+    <p class="pause">The thing about being friends with you is that it doesn’t feel like something I chose. It feels like something that was already written — somewhere in the margins of a book, between the lines of a scene we both watched at the same time in different places.</p>
+    <p>You’re the person I send the voice note to at 3AM. The one who gets why the fictional grief is actually real grief. The one who doesn’t need it explained.</p>
+    <p class="pause">You, me, and Hafsu — we’re the kind of trio that doesn’t happen twice. But you and I specifically have something that lives in the pages and the frames. In the stories that broke us open.</p>
+    <p>I’ve thought about how to say this properly for a long time.</p>
+    <p class="pause">I don’t think there’s a proper way. There’s only this: thank you for being the kind of person who stays. Who spirals with me. Who grieves fictional characters like they deserve to be grieved.</p>
+    <p>Happy 19th, Deeda. May this year be as full of feeling as every story we ever loved — and may you always, always know you are the best part of mine.</p>
+    <div class="sign">— always, your person</div>
+  </section>
+
+  <section class="wish">
+    <div class="big">Thank you for existing.</div>
+    <div class="sub">May 19 be the year every story you love starts feeling like it was written for you — because it was.</div>
+  </section>
+
+  <section class="finale">
+    <div class="orn">✦</div>
+    <div class="fl">In every story we ever loved,</div>
+    <div class="fl">the rarest kind of love was never the loud one.</div>
+    <div class="fl">It was the one that stayed through every twist,</div>
+    <div class="fl">every heartbreak, every unfinished chapter.</div>
+    <div class="fl accent">And after all those stories, I realised something simple —</div>
+    <div class="fl accent">the most beautiful part was never the ending.</div>
+    <div class="fl grand">Thank you for being someone who stayed.</div>
+    <div class="fl grand">Happy 19th, Deeda.</div>
+    <div class="fl small">In my story… that has always been you.</div>
+  </section>
+
+</div>
+</body>
+</html>
