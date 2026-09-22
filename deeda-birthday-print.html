@@ -3,10 +3,32 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Happy 19th, Deeda</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
 <style>
+  @font-face{
+    font-family:'Display';
+    src:url('pdf-fonts/LiberationSerif-Regular.ttf') format('truetype');
+    font-weight:400;font-style:normal;
+  }
+  @font-face{
+    font-family:'Display';
+    src:url('pdf-fonts/LiberationSerif-Italic.ttf') format('truetype');
+    font-weight:400;font-style:italic;
+  }
+  @font-face{
+    font-family:'Display';
+    src:url('pdf-fonts/LiberationSerif-Bold.ttf') format('truetype');
+    font-weight:700;font-style:normal;
+  }
+  @font-face{
+    font-family:'Body';
+    src:url('pdf-fonts/LiberationSerif-Regular.ttf') format('truetype');
+    font-weight:400;font-style:normal;
+  }
+  @font-face{
+    font-family:'Body';
+    src:url('pdf-fonts/LiberationSerif-Italic.ttf') format('truetype');
+    font-weight:400;font-style:italic;
+  }
   @page { size: A4; margin: 18mm 16mm; }
   :root{
     --ink:#1a1210;
@@ -21,7 +43,7 @@
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
-    font-family:'Crimson Pro',Georgia,serif;
+    font-family:'Body',Georgia,serif;
     font-weight:300;
     font-size:12.5pt;
     line-height:1.65;
@@ -44,7 +66,7 @@
   }
   .orn{color:var(--gold2);letter-spacing:.4em;font-size:10pt;margin-bottom:18mm;}
   .cover-quote{
-    font-family:'IM Fell English',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-style:italic;
     font-size:15pt;
     color:var(--burgundy);
@@ -53,7 +75,7 @@
     margin:0 0 10mm;
   }
   .cover h1{
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-weight:300;
     font-size:42pt;
     letter-spacing:.18em;
@@ -81,7 +103,7 @@
     margin:8mm auto;
   }
   h2{
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-weight:300;
     font-size:20pt;
     color:var(--burgundy);
@@ -90,7 +112,7 @@
   }
   h2 em{font-style:italic;color:var(--gold2);}
   .eyebrow{
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-size:8.5pt;
     letter-spacing:.32em;
     text-transform:uppercase;
@@ -105,7 +127,7 @@
   }
   .chapter:last-of-type{border-bottom:none;}
   .epigraph{
-    font-family:'IM Fell English',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-style:italic;
     color:var(--muted);
     font-size:11.5pt;
@@ -118,16 +140,16 @@
     background:var(--cream);
   }
   .card .lbl{
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-size:8pt;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);
   }
   .card .ttl{
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-size:16pt;color:var(--burgundy);margin:.8mm 0;
   }
   .card .meta{font-size:10pt;color:var(--muted);font-style:italic;margin-bottom:3mm;}
   .card .qt{
-    font-family:'IM Fell English',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-style:italic;color:var(--gold);margin:2mm 0 3mm;
   }
   .card .mem{font-size:11.5pt;}
@@ -153,7 +175,7 @@
   }
   .chat-stamp{
     text-align:center;
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-size:8.5pt;
     letter-spacing:.22em;
     text-transform:uppercase;
@@ -165,7 +187,7 @@
     padding-top:8mm;
   }
   .letter-greeting{
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-size:18pt;
     color:var(--burgundy);
     margin-bottom:6mm;
@@ -178,7 +200,7 @@
   .letter p.pause{margin-top:6mm;}
   .sign{
     margin-top:10mm;
-    font-family:'IM Fell English',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-style:italic;
     color:var(--gold2);
     font-size:13pt;
@@ -193,7 +215,7 @@
     padding:10mm 6mm;
   }
   .finale .fl{
-    font-family:'IM Fell English',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-style:italic;
     font-size:13pt;
     color:var(--ink);
@@ -202,7 +224,7 @@
   }
   .finale .accent{color:var(--gold2);font-size:14pt;}
   .finale .grand{
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-size:20pt;
     color:var(--burgundy);
     margin:5mm 0;
@@ -216,13 +238,13 @@
     border-bottom:1px solid var(--rule);
   }
   .wish .big{
-    font-family:'Cormorant Garamond',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-style:italic;
     font-size:22pt;
     color:var(--gold2);
   }
   .wish .sub{
-    font-family:'IM Fell English',Georgia,serif;
+    font-family:'Display',Georgia,serif;
     font-style:italic;
     color:var(--muted);
     margin-top:3mm;
